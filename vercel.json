@@ -4,17 +4,17 @@
     { "src": "index.html", "use": "@vercel/static" }
   ],
   "routes": [
-    { "src": "/sitemap.xml", "dest": "/sitemap.xml" },
-    { "src": "/robots.txt", "dest": "/robots.txt" },
-    { "src": "/manifest.json", "dest": "/manifest.json" },
-    { "src": "/google68eb8270e12b2dae.html", "dest": "/google68eb8270e12b2dae.html" },
-    { "src": "/favicon.ico", "dest": "/assets/favicon.svg" },
-    { "src": "/assets/(.*)", "dest": "/assets/$1" },
+    { "src": "^/sitemap.xml$", "dest": "/sitemap.xml" },
+    { "src": "^/robots.txt$", "dest": "/robots.txt" },
+    { "src": "^/manifest.json$", "dest": "/manifest.json" },
+    { "src": "^/google68eb8270e12b2dae.html$", "dest": "/google68eb8270e12b2dae.html" },
+    { "src": "^/favicon.ico$", "dest": "/assets/favicon.svg" },
+    { "src": "^/assets/(.*)$", "dest": "/assets/$1" },
     { "src": "/(.*)", "dest": "/index.html" }
   ],
   "headers": [
     {
-      "source": "/sitemap.xml",
+      "source": "^/sitemap.xml$",
       "headers": [
         { "key": "Content-Type", "value": "application/xml; charset=utf-8" }
       ]
@@ -27,7 +27,7 @@
       ]
     },
     {
-      "source": "/assets/(.*)",
+      "source": "^/assets/(.*)$",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
       ]
