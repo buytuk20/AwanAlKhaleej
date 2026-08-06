@@ -8,8 +8,9 @@
     { "src": "/robots.txt", "dest": "/robots.txt" },
     { "src": "/manifest.json", "dest": "/manifest.json" },
     { "src": "/google68eb8270e12b2dae.html", "dest": "/google68eb8270e12b2dae.html" },
+    { "src": "/favicon.ico", "dest": "/assets/favicon.svg" },
     { "src": "/assets/(.*)", "dest": "/assets/$1" },
-    { "src": "\\/(.*)", "dest": "/index.html" }
+    { "src": "/(.*)", "dest": "/index.html" }
   ],
   "headers": [
     {
