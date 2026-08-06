@@ -4,9 +4,20 @@
     { "src": "index.html", "use": "@vercel/static" }
   ],
   "routes": [
+    { "src": "/sitemap.xml", "dest": "/sitemap.xml" },
+    { "src": "/robots.txt", "dest": "/robots.txt" },
+    { "src": "/manifest.json", "dest": "/manifest.json" },
+    { "src": "/google68eb8270e12b2dae.html", "dest": "/google68eb8270e12b2dae.html" },
+    { "src": "/assets/(.*)", "dest": "/assets/$1" },
     { "src": "\\/(.*)", "dest": "/index.html" }
   ],
   "headers": [
+    {
+      "source": "/sitemap.xml",
+      "headers": [
+        { "key": "Content-Type", "value": "application/xml; charset=utf-8" }
+      ]
+    },
     {
       "source": "/*.html",
       "headers": [
