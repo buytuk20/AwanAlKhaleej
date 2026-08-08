@@ -7,9 +7,10 @@
     { "src": "^/sitemap.xml$", "dest": "/sitemap.xml" },
     { "src": "^/robots.txt$", "dest": "/robots.txt" },
     { "src": "^/manifest.json$", "dest": "/manifest.json" },
-    { "src": "^/google68eb8270e12b2dae.html$", "dest": "/google68eb8270e12b2dae.html" },
+    { "src": "^/\\.well-known/google68eb8270e12b2dae\\.html$", "dest": "/.well-known/google68eb8270e12b2dae.html" },
     { "src": "^/favicon.ico$", "dest": "/assets/favicon.svg" },
     { "src": "^/assets/(.*)$", "dest": "/assets/$1" },
+    { "src": "^/\\.well-known/(.*)$", "dest": "/.well-known/$1" },
     { "src": "/(.*)", "dest": "/index.html" }
   ],
   "headers": [
